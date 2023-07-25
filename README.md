@@ -2,6 +2,8 @@
 
 Keyboard layout based on the QWERTY layout with extra symbols and diacritics so that typing both in French and English is easy and fast. It is also easy to learn!
 
+TODO: update screenshot
+
 [![Keyboard layout screenshot](qwerty-fr-keymap.png)](https://qwerty-fr.org)
 
 👉 You can [try this keyboard layout online](https://qwerty-fr.org) without installing it!
@@ -25,7 +27,7 @@ In order to fix these issues, QWERTY-fr is a new keyboard layout that is entirel
 
 ## 💡 Philosophy overview
 
-This layout is a strict superset of the QWERTY layout. This means that **all the keys** of the QWERTY layout are kept in the same location. Anyone using a QWERTY layout can type on the QWERTY-fr layout without even knowing that they are not typing on a QWERTY layout.
+This layout is a strict superset of the UK QWERTY layout. The UK layout was chosen because it shares the same ISO geometry as the AZERTY layout. This means that **all the keys** of the QWERTY layout are kept in the same location. Anyone using a QWERTY layout can type on the QWERTY-fr layout without even knowing that they are not typing on a QWERTY layout.
 
 In order to type special characters with diacritics, there are a few simple rules to know. <kbd>AltGr</kbd> corresponds to <kbd>Option ⌥</kbd> on macOS, and <kbd>Ctrl</kbd> <kbd>Alt</kbd> on Windows (useful if you don't have the <kbd>AltGr</kbd> key):
 

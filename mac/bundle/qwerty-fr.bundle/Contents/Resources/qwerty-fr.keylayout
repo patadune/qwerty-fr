@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-07-03 at 11:41 (CEST)-->
+<!--Last edited by Ukelele version 359 on 2023-07-25 at 12:39 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
     <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
@@ -201,7 +201,7 @@
             <key code="7" action="X"/>
             <key code="8" action="C"/>
             <key code="9" action="V"/>
-            <key code="10" output="~"/>
+            <key code="10" output="¬"/>
             <key code="11" action="B"/>
             <key code="12" action="Q"/>
             <key code="13" action="W"/>
@@ -210,8 +210,8 @@
             <key code="16" action="12"/>
             <key code="17" action="T"/>
             <key code="18" action="!"/>
-            <key code="19" output="@"/>
-            <key code="20" output="#"/>
+            <key code="19" output="&#x0022;"/>
+            <key code="20" output="£"/>
             <key code="21" output="$"/>
             <key code="22" output="^"/>
             <key code="23" output="%"/>
@@ -230,7 +230,7 @@
             <key code="36" output="&#x000D;"/>
             <key code="37" action="L"/>
             <key code="38" action="J"/>
-            <key code="39" output="&#x0022;"/>
+            <key code="39" output="@"/>
             <key code="40" action="K"/>
             <key code="41" output=":"/>
             <key code="42" action="|"/>
@@ -425,7 +425,7 @@
             <key code="7" output="×"/>
             <key code="8" action="ç"/>
             <key code="9" action="action 2"/>
-            <key code="10" action="` 1"/>
+            <key code="10" output="¦"/>
             <key code="11" output="ß"/>
             <key code="12" output="â"/>
             <key code="13" output="é"/>
@@ -465,7 +465,7 @@
             <key code="47" action="·"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="≤"/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -537,7 +537,7 @@
             <key code="7" output="÷"/>
             <key code="8" action="Ç"/>
             <key code="9" output=""/>
-            <key code="10" action="~"/>
+            <key code="10" action="grave accent"/>
             <key code="11" action="ß"/>
             <key code="12" output="Â"/>
             <key code="13" action="É"/>
@@ -577,7 +577,7 @@
             <key code="47" action="…"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="≥"/>
+            <key code="50" output="„"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -1616,11 +1616,14 @@
             <when state="math" output="⌊"/>
         </action>
         <action id="\">
-            <when state="none" output="\"/>
+            <when state="none" output="#"/>
         </action>
         <action id="]">
             <when state="none" output="]"/>
             <when state="math" output="⌋"/>
+        </action>
+        <action id="`">
+            <when state="none" next="grave accent"/>
         </action>
         <action id="` 1">
             <when state="none" next="grave accent"/>
@@ -1703,6 +1706,9 @@
             <when state="ring" output="g̊"/>
             <when state="tilde" output="g̃"/>
         </action>
+        <action id="grave accent">
+            <when state="none" next="grave accent"/>
+        </action>
         <action id="h">
             <when state="none" output="h"/>
             <when state="acute accent" output="h́"/>
@@ -1746,7 +1752,7 @@
             <when state="macron" output="ł"/>
         </action>
         <action id="less_extra">
-            <when state="none" output="&#x003C;"/>
+            <when state="none" output="\"/>
             <when state="math" output="≪"/>
         </action>
         <action id="m">
@@ -1766,7 +1772,7 @@
             <when state="none" next="math"/>
         </action>
         <action id="more_extra">
-            <when state="none" output="&#x003E;"/>
+            <when state="none" output="|"/>
             <when state="math" output="≫"/>
         </action>
         <action id="p">
@@ -1880,7 +1886,7 @@
             <when state="math" output="⟦"/>
         </action>
         <action id="|">
-            <when state="none" output="|"/>
+            <when state="none" output="~"/>
             <when state="math" output="‖"/>
         </action>
         <action id="}">
@@ -2013,21 +2019,21 @@
             <when state="none" output="’"/>
             <when state="math" output="⇎"/>
         </action>
-        <action id="„">
-            <when state="none" output="„"/>
-            <when state="circumflex" output="“"/>
-        </action>
-        <action id="…">
-            <when state="none" output="…"/>
-            <when state="math" output="↛"/>
+        <action id="“">
+            <when state="none" output="“"/>
+            <when state="math" output="⌈"/>
         </action>
         <action id="”">
             <when state="none" output="”"/>
             <when state="math" output="⌉"/>
         </action>
-        <action id="“">
-            <when state="none" output="“"/>
-            <when state="math" output="⌈"/>
+        <action id="„">
+            <when state="none" next="tilde"/>
+            <when state="circumflex" output="“"/>
+        </action>
+        <action id="…">
+            <when state="none" output="…"/>
+            <when state="math" output="↛"/>
         </action>
         <action id="≈">
             <when state="none" output="≈"/>
